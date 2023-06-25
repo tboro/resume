@@ -22,6 +22,7 @@ export interface HomepageMeta {
  */
 export interface Hero {
   imageSrc: string;
+  welcome: string;
   name: string;
   description: JSX.Element;
   actions: HeroActionItem[];
@@ -74,12 +75,11 @@ export interface SkillGroup {
 }
 
 /**
- * Portfolio section
+ * Photos section
  */
-export interface PortfolioItem {
+export interface PhotoItem {
   title: string;
   description: string;
-  url: string;
   image: string | StaticImageData;
 }
 
@@ -91,20 +91,6 @@ export interface TimelineItem {
   location: string;
   title: string;
   content: JSX.Element;
-}
-
-/**
- * Testimonial section
- */
-export interface TestimonialSection {
-  imageSrc?: string | StaticImageData;
-  testimonials: Testimonial[];
-}
-
-export interface Testimonial {
-  image?: string;
-  name: string;
-  text: string;
 }
 
 /**
@@ -127,7 +113,7 @@ export const ContactType = {
   Instagram: 'Instagram',
 } as const;
 
-export type ContactType = typeof ContactType[keyof typeof ContactType];
+export type ContactType = (typeof ContactType)[keyof typeof ContactType];
 
 export interface ContactItem {
   type: ContactType;

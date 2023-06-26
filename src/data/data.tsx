@@ -112,16 +112,10 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Developer who combines a keen eye for detail with a clear view of the
-    overall picture. His strong analytical skills, honed over a decade in the
-    field, enable him to deliver top-quality results across a wide range of
-    projects. His professional journey has taken him through diverse
-    business landscapes, from educational platforms and the financial
-    sector to tourism and beyond, enriching his portfolio with varied
-    experiences. Tomasz is currently a whizz in PHP and JavaScript, with a
-    robust grounding in TypeScript, Angular, and React to complement his
-    skill set. When he's not coding, loves to unwind with a good board game,
-    practice piano, or spend time actively hiking or cycling.`,
+  description: `I have been programming for several years. 
+    Key areas of my experience include design and development of web services based on PHP, Java Script and TypeScript, React and Angular.
+    I am creative problem solver capable of delivering innovative solutions in dynamic environments.
+    I'm passionate about Front-End Development and ready for new challanges and creating exceptional user interfaces.`,
   aboutItems: [
     {label: 'Location', text: 'Kraków, Poland', Icon: MapIcon},
     {label: 'Age', text: '38', Icon: CalendarIcon},
@@ -154,11 +148,11 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Java Script',
-        level: 9,
+        level: 8,
       },
       {
         name: 'Typescript',
-        level: 7,
+        level: 6,
       },
       {
         name: 'PHP',
@@ -171,7 +165,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'React',
-        level: 6,
+        level: 8,
       },
       {
         name: 'Angular',
@@ -191,7 +185,7 @@ export const skills: SkillGroup[] = [
       },
       {
         name: 'SCSS',
-        level: 9,
+        level: 8,
       },
       {
         name: 'TailwindCSS',
@@ -427,7 +421,7 @@ export const experience: TimelineItem[] = [
             </span>
             <span>tech-stack: PHP, Vegas CMF, MongoDB, Composer, JavaScript, JQuery</span>
           </li>
-          <li>11.2014: Development of Drupal plugin for Tokenizer (open source), tech-stack: PHP, Drupal.</li>
+          <li>11.2014: Development of Drupal plugin for Tokenizer, tech-stack: PHP, Drupal.</li>
           <li>
             <span>08.2014 - 10.2017:</span>
             <span>Development of Vegas CMF (open source),</span>

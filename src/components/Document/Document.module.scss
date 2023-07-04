@@ -1,3 +1,5 @@
+$documentWidth: 1060px;
+
 @page {
   size: 21cm 29.7cm;
   margin: 10mm 12mm;
@@ -9,8 +11,14 @@
   color: rgb(33,33,33);
   margin-left: 50%;
   transform: translateX(-50%);
-  width: 1060px;
+  width: $documentWidth;
+  min-width: $documentWidth;
   font-size: 19px;
+
+  header {
+    width: 100%;
+    min-width: 100%;
+  }
 
   h1 {
     text-transform: uppercase;
@@ -50,7 +58,7 @@
   }
 
   .rightColumn {
-    flex: 70%;
+    flex: 100%;
 
     ul {
       padding-left: 40px;
@@ -100,6 +108,42 @@
 
     .font-bold {
       font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: calc($documentWidth + 30px)) {
+  .cvContainer {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0 15px;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 820px) {
+  .cvContainer {
+    header {
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media print {
+  .cvContainer {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: $documentWidth;
+    min-width: $documentWidth;
+    zoom: 98.5%;
+
+    header {
+      img {
+        display: block;
+      }
     }
   }
 }

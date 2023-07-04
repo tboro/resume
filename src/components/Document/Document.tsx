@@ -26,7 +26,7 @@ const Document: FC = memo(() => {
         <h3 className="py-4 text-xl font-normal">{cvData.wantedJobTitle}</h3>
       </header>
 
-      <div className="container flex">
+      <div className="flex">
         <div className={'border-fog-500 border-r-2 px-0 py-6 pr-8 ' + styles.leftColumn}>
           <div className={styles.address}>
             <h2 className="mb-4 text-xl font-semibold">Details</h2>
@@ -93,7 +93,7 @@ const Document: FC = memo(() => {
       {company && <footer className="border-fog-500 border-t-2 text-sm">
         <p className="pt-2">
           I hereby give consent for my personal data to be processed by {company} for the purpose of conducting
-          recruitment for the position for which I am applying.
+          recruitment for the position for&nbsp;which I&nbsp;am&nbsp;applying.
         </p>
         <p className="pb-1">
           I also consent to processing of my personal data by {company} for the purposes of any future recruitment

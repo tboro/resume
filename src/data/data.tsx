@@ -197,17 +197,25 @@ export const skills: SkillGroup[] = [
         name: 'Tailwind CSS',
         level: 4,
       },
+      {
+        name: 'Next.js',
+        level: 4,
+      },
     ],
   },
   {
     name: 'Backend development',
     skills: [
       {
-        name: 'PHP',
-        level: 9,
+        name: 'Symfony',
+        level: 7,
       },
       {
-        name: 'Symfony',
+        name: 'Laravel',
+        level: 4,
+      },
+      {
+        name: 'PhpUnit',
         level: 7,
       },
       {
@@ -217,10 +225,6 @@ export const skills: SkillGroup[] = [
       {
         name: 'PostgreSQL',
         level: 8,
-      },
-      {
-        name: 'PhpUnit',
-        level: 7,
       }
     ],
   },
@@ -360,9 +364,6 @@ export const photoItems: PhotoItem[] = [
   },
 ];
 
-/**
- * Resume section -- TODO: Standardize resume contact format or offer MDX
- */
 export const education: TimelineItem[] = [
   {
     date: '2006-2011',
@@ -403,7 +404,7 @@ export const experience: TimelineItem[] = [
           <li>
             <span>04.2023 - now:</span>
             <span>Development of a company website,</span>
-            <span>tech-stack: React, TypeScript, Tailwind CSS, Next JS,Strapi</span>
+            <span>tech-stack: React, TypeScript, Tailwind CSS, Next JS, Strapi</span>
           </li>
           <li>
             <span>12.2021 - 03.2023:</span>

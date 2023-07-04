@@ -4,9 +4,9 @@ import Icon, {IconProps} from './Icon';
 
 const TboroQrCode: FC<IconProps> = memo(props => (
   <Icon {...{
-    "xmlns": "http://www.w3.org/2000/svg",
-    "xmlns:xlink": "http://www.w3.org/1999/xlink",
-    "xml:space": "preserve",
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    xmlSpace: "preserve",
     width: 120,
     height: 120,
     viewBox: "0 0 696 696",

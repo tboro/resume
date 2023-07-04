@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import {useRouter} from "next/router";
 import React, {FC, memo} from 'react';
 
 import {aboutData, cvData, education, experience, heroData, languages, links, skills} from '../../data/data';
@@ -7,10 +8,14 @@ import {SkillGroup} from './Skills';
 import TimelineItem from "./TimelineItem";
 
 const Document: FC = memo(() => {
+  const router = useRouter();
+  const company: string | undefined = router.query.company?.toString();
+  const photo: boolean = router.query.photo !== undefined ? true : false;
+
   return (
     <div className={['bg-white', styles.cvContainer].join(' ')}>
       <header className="border-fog-500 border-b-2 px-0 py-4">
-        {!!aboutData.profileImageSrc && (
+        {photo && !!aboutData.profileImageSrc && (
           <div className="col-span-1 flex justify-end">
             <div className="absolute h-48 overflow-hidden">
               <Image alt="about-me-image" className="h-full w-full object-cover" src={aboutData.profileImageSrc} />
@@ -84,6 +89,17 @@ const Document: FC = memo(() => {
           </div>
         </div>
       </div>
+
+      {company && <footer className="border-fog-500 border-t-2 text-sm">
+        <p className="pt-2">
+          I hereby give consent for my personal data to be processed by {company} for the purpose of conducting
+          recruitment for the position for which I am applying.
+        </p>
+        <p className="pb-1">
+          I also consent to processing of my personal data by {company} for the purposes of any future recruitment
+          processes.
+        </p>
+      </footer>}
     </div>
   );
 });

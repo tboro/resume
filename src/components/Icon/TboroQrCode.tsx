@@ -2,17 +2,17 @@ import {FC, memo} from 'react';
 
 import Icon, {IconProps} from './Icon';
 
-const QrCode: FC<IconProps> = memo(props => (
+const TboroQrCode: FC<IconProps> = memo(props => (
   <Icon {...{
     "xmlns": "http://www.w3.org/2000/svg",
     "xmlns:xlink": "http://www.w3.org/1999/xlink",
     "xml:space": "preserve",
-    width: 80,
-    height: 80,
+    width: 120,
+    height: 120,
     viewBox: "0 0 696 696",
     ...props
   }}>
-    <g fill="#000000">
+    <g fill="#000000" transform="translate(-30,-30) scale(1.05)">
       <g transform="translate(312,48) scale(4.12)">
         <path d="M0 0h6v6H0Z" />
       </g>
@@ -758,4 +758,4 @@ const QrCode: FC<IconProps> = memo(props => (
   </Icon>
 ));
 
-export default QrCode;
+export default TboroQrCode;

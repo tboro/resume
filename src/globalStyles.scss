@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
 @layer utilities {
   /* Chrome, Safari and Opera */
@@ -37,9 +37,9 @@ body {
   position: relative;
   width: 100%;
   color: #444444;
-  font-family: Nunito, sans-serif;
+  font-family: Montserrat, sans-serif;
   letter-spacing: 0.5px;
-  background-color: #fafafa;
+  background-color: white;
 }
 
 td,
@@ -65,11 +65,8 @@ em {
   }
   ul {
     list-style: disc;
-    list-style-position: inside;
-
-    &:nth-of-type(2) {
-      list-style: none;
-    }
+    list-style-position: outside;
+    padding-left: 30px;
 
     li {
       padding: 5px 0;

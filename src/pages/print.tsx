@@ -1,16 +1,16 @@
 import {FC, memo} from 'react';
 
+import Document from '../components/Document/Document';
 import Page from '../components/Layout/Page';
-import Resume from '../components/Sections/Resume';
-import {homePageMeta} from '../data/data';
+import {pageMeta} from '../data/data';
 
-const Cv: FC = memo(() => {
-  const {title, description} = homePageMeta;
+const Print: FC = memo(() => {
+  const {title, description} = pageMeta;
   return (
     <Page description={description} title={title}>
-      <Resume />
+      <Document />
     </Page>
   );
 });
 
-export default Cv;
+export default Print;

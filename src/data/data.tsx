@@ -11,6 +11,8 @@ import {
 import FacebookIcon from '../components/Icon/FacebookIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
+import LinkedInQrCode from "../components/Icon/LinkedInQrCode";
+import TboroQrCode from '../components/Icon/TboroQrCode';
 import heroImage from '../images/header-background.webp';
 import photoImage1 from '../images/photos/photo-1.jpg';
 import photoImage2 from '../images/photos/photo-2.jpg';
@@ -37,8 +39,9 @@ import {
   About,
   ContactSection,
   ContactType,
+  CvData,
   Hero,
-  HomepageMeta,
+  PageMeta,
   PhotoItem,
   SkillGroup,
   Social,
@@ -48,7 +51,7 @@ import {
 /**
  * Page meta data
  */
-export const homePageMeta: HomepageMeta = {
+export const pageMeta: PageMeta = {
   title: 'Tomasz Borodziuk`s personal resume website',
   description: 'Software developer resume',
 };
@@ -107,6 +110,22 @@ export const heroData: Hero = {
   ],
 };
 
+export const cvData: CvData = {
+  location: 'Kraków / remote',
+  phone: '+48 606 510 527',
+  email: 'tomasz.borodziuk@gmail.com',
+  wantedJobTitle: `Full Stack Developer`,
+  profile: (
+    <>
+      <p>
+        Full Stack Developer experienced in PHP, Java Script, Typescript and frameworks such as React and Angular. A
+        creative problem solver capable of delivering innovative solutions in dynamic environments. Passionate about
+        Front-End Development, ready for new challenges and creating exceptional user interfaces.
+      </p>
+    </>
+  ),
+};
+
 /**
  * About section
  */
@@ -130,19 +149,6 @@ export const aboutData: About = {
  * Skills section
  */
 export const skills: SkillGroup[] = [
-  {
-    name: 'Spoken languages',
-    skills: [
-      {
-        name: 'Polish',
-        level: 10,
-      },
-      {
-        name: 'English',
-        level: 6,
-      },
-    ],
-  },
   {
     name: 'Programming',
     skills: [
@@ -188,7 +194,7 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'TailwindCSS',
+        name: 'Tailwind CSS',
         level: 4,
       },
     ],
@@ -201,7 +207,11 @@ export const skills: SkillGroup[] = [
         level: 9,
       },
       {
-        name: 'MysqlSQL',
+        name: 'Symfony',
+        level: 7,
+      },
+      {
+        name: 'MySQL',
         level: 9,
       },
       {
@@ -209,22 +219,38 @@ export const skills: SkillGroup[] = [
         level: 8,
       },
       {
-        name: 'Symfony',
+        name: 'PhpUnit',
         level: 7,
-      },
-      {
-        name: 'Node.js',
-        level: 3,
-      },
-      {
-        name: 'Next.js',
-        level: 3,
-      },
-      {
-        name: 'Strapi',
-        level: 2,
-      },
+      }
     ],
+  },
+];
+
+export const languages: SkillGroup = {
+  name: 'Languages',
+  skills: [
+    {
+      name: 'Polish',
+      level: 10,
+    },
+    {
+      name: 'English',
+      level: 6,
+    },
+  ],
+  className: 'languagesGroup',
+};
+
+export const links: Social[] = [
+  {
+    label: 'My website',
+    Icon: TboroQrCode,
+    href: 'https://tboro.vercel.app',
+  },
+  {
+    label: 'LinkedIn profile',
+    Icon: LinkedInQrCode,
+    href: 'https://www.linkedin.com/in/tomasz-borodziuk-3aa76a54/',
   },
 ];
 
@@ -340,13 +366,13 @@ export const photoItems: PhotoItem[] = [
 export const education: TimelineItem[] = [
   {
     date: '2006-2011',
-    location: 'Jagielloninan University',
+    location: 'Jagielloninan University, Kraków',
     title: 'Masters degree',
     content: <p>Electronic Information Processing</p>,
   },
   {
     date: '2013-2014',
-    location: 'Jagielloninan University',
+    location: 'Jagielloninan University, Kraków',
     title: 'Postgraduate studies',
     content: <p>Mobile Application Development</p>,
   },
@@ -355,7 +381,7 @@ export const education: TimelineItem[] = [
 export const experience: TimelineItem[] = [
   {
     date: '2014 - Present',
-    location: 'Amsterdam Standard',
+    location: 'Amsterdam Standard, Kraków',
     title: 'Full-Stack Developer',
     content: (
       <div className="timelineItemContent">
@@ -433,8 +459,8 @@ export const experience: TimelineItem[] = [
   },
   {
     date: '2012 - 2014',
-    location: 'Hewlett-Packard Polska',
-    title: 'Software Designer I/Technical Solutions Consultant II',
+    location: 'Hewlett-Packard Polska, Kraków',
+    title: 'Software Designer I / Technical Solutions Consultant II',
     content: (
       <div className="timelineItemContent">
         <p>Technologies: PHP, JS, HTML, XML, CSS, SQL, Drupal, SVN, Linux</p>
@@ -456,7 +482,7 @@ export const experience: TimelineItem[] = [
             proactively assisted internal and external businesses and end-users to avoid or reduce the incidence of
             technical problems,
           </li>
-          <li>resoled technical issues from incoming internal and external contacts and notification systems,</li>
+          <li>resolved technical issues from incoming internal and external contacts and notification systems,</li>
           <li>checked software functionalities and debugged source code</li>
         </ul>
       </div>
@@ -464,7 +490,7 @@ export const experience: TimelineItem[] = [
   },
   {
     date: '2012',
-    location: 'Hiflex Poland',
+    location: 'Hiflex Poland, Kraków',
     title: 'Technical Support Engineer / Junior PHP Developer',
     content: (
       <div className="timelineItemContent">

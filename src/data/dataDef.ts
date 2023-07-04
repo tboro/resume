@@ -3,7 +3,7 @@ import {FC, ForwardRefExoticComponent, SVGProps} from 'react';
 
 import {IconProps} from '../components/Icon/Icon';
 
-export interface HomepageMeta {
+export interface PageMeta {
   title: string;
   description: string;
   ogImageUrl?: string;
@@ -44,6 +44,17 @@ export interface About {
   aboutItems: AboutItem[];
 }
 
+/**
+ * Resume document data
+ */
+export interface CvData {
+  location: string;
+  phone: string;
+  email: string;
+  wantedJobTitle: string;
+  profile: JSX.Element;
+}
+
 export interface AboutItem {
   label: string;
   text: string;
@@ -72,6 +83,12 @@ export interface Skill {
 export interface SkillGroup {
   name: string;
   skills: Skill[];
+  className?: string;
+}
+
+export interface Link {
+  name: string;
+  url: string;
 }
 
 /**

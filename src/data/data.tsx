@@ -112,7 +112,7 @@ export const heroData: Hero = {
 
 export const cvData: CvData = {
   location: 'Kraków / remote',
-  phone: '+48 606 510 527',
+  phone: '+48 606 510 267',
   email: 'tomasz.borodziuk@gmail.com',
   wantedJobTitle: `Full Stack Developer`,
   profile: (

@@ -1,7 +1,6 @@
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -81,12 +80,12 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Krakow based <strong className="text-stone-100">Full Stack Software Developer</strong>, currently working
-        at{' '}
+        I'm a Krakow based <strong className="text-stone-100">Full Stack Software Developer</strong>. During the last 9 years
+        I worked at{' '}
         <a className="font-bold text-stone-100" href="https://amsterdamstandard.com">
           Amsterdam Standard
         </a>{' '}
-        helping build Java Script and PHP projects.
+        helping build Java Script and PHP projects. <strong>Currently I am looking for a new job.</strong>
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me playing a good <strong className="text-stone-100">board game</strong>,
@@ -140,8 +139,7 @@ export const aboutData: About = {
     {label: 'Age', text: '38', Icon: CalendarIcon},
     {label: 'Nationality', text: 'Polish', Icon: FlagIcon},
     {label: 'Interests', text: 'bord games, piano practise, mountain trekking, cycling', Icon: SparklesIcon},
-    {label: 'Study', text: 'Jagiellonian University', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Amsterdam Standard', Icon: BuildingOffice2Icon},
+    {label: 'Study', text: 'Jagiellonian University', Icon: AcademicCapIcon}
   ],
 };
 
@@ -381,7 +379,7 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: '2014 - Present',
+    date: '2014 - 2023',
     location: 'Amsterdam Standard, Kraków',
     title: 'Full-Stack Developer',
     content: (
@@ -402,7 +400,7 @@ export const experience: TimelineItem[] = [
         <p>Worked on:</p>
         <ul>
           <li>
-            <span>04.2023 - now:</span>
+            <span>04.2023 - 08.2023:</span>
             <span>Development of a company website,</span>
             <span>tech-stack: React, TypeScript, Tailwind CSS, Next JS, Strapi</span>
           </li>

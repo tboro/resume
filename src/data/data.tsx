@@ -10,7 +10,7 @@ import {
 import FacebookIcon from '../components/Icon/FacebookIcon';
 import GithubIcon from '../components/Icon/GithubIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import LinkedInQrCode from "../components/Icon/LinkedInQrCode";
+import LinkedInQrCode from '../components/Icon/LinkedInQrCode';
 import TboroQrCode from '../components/Icon/TboroQrCode';
 import heroImage from '../images/header-background.webp';
 import photoImage1 from '../images/photos/photo-1.jpg';
@@ -47,6 +47,13 @@ import {
   TimelineItem,
 } from './dataDef';
 
+const getAge = (birthday: Date) => {
+  const diffMiliseconds = new Date().getTime() - birthday.getTime();
+  const date = new Date(diffMiliseconds);
+
+  return date.getFullYear() - 1970;
+};
+
 /**
  * Page meta data
  */
@@ -80,12 +87,11 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Krakow based <strong className="text-stone-100">Full Stack Software Developer</strong>. During the last 9 years
-        I worked at{' '}
-        <a className="font-bold text-stone-100" href="https://amsterdamstandard.com">
-          Amsterdam Standard
+        I'm a Krakow based <strong className="text-stone-100">Software Developer</strong>. I am working at{' '}
+        <a className="font-bold text-stone-100" href="https://www.hitachienergy.com">
+          Hitachi Energy
         </a>{' '}
-        helping build Java Script and PHP projects. <strong>Currently I am looking for a new job.</strong>
+        helping build a JavaScript project.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
         In my free time time, you can catch me playing a good <strong className="text-stone-100">board game</strong>,
@@ -117,7 +123,7 @@ export const cvData: CvData = {
   profile: (
     <>
       <p>
-        Full Stack Developer experienced in PHP, Java Script, Typescript and frameworks such as React and Angular. A
+        Full Stack Developer experienced in PHP, JavaScript, Typescript and frameworks such as React and Angular. A
         creative problem solver capable of delivering innovative solutions in dynamic environments. Passionate about
         Front-End Development, ready for new challenges and creating exceptional user interfaces.
       </p>
@@ -131,15 +137,15 @@ export const cvData: CvData = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `I have been programming for several years. 
-    Key areas of my experience include design and development of web services based on PHP, Java Script and TypeScript, React and Angular.
+    Key areas of my experience include design and development of web services based on PHP, JavaScript and TypeScript, React and Angular.
     I am creative problem solver capable of delivering innovative solutions in dynamic environments.
-    I'm passionate about Front-End Development and ready for new challanges and creating exceptional user interfaces.`,
+    I'm passionate about Front-End Development ready for new challanges and creating exceptional user interfaces.`,
   aboutItems: [
     {label: 'Location', text: 'Kraków, Poland', Icon: MapIcon},
-    {label: 'Age', text: '38', Icon: CalendarIcon},
+    {label: 'Age', text: getAge(new Date(1985, 3, 30)).toString(), Icon: CalendarIcon},
     {label: 'Nationality', text: 'Polish', Icon: FlagIcon},
     {label: 'Interests', text: 'bord games, piano practise, mountain trekking, cycling', Icon: SparklesIcon},
-    {label: 'Study', text: 'Jagiellonian University', Icon: AcademicCapIcon}
+    {label: 'Study', text: 'Jagiellonian University', Icon: AcademicCapIcon},
   ],
 };
 
@@ -151,7 +157,7 @@ export const skills: SkillGroup[] = [
     name: 'Programming',
     skills: [
       {
-        name: 'Java Script',
+        name: 'JavaScript',
         level: 8,
       },
       {
@@ -223,7 +229,7 @@ export const skills: SkillGroup[] = [
       {
         name: 'PostgreSQL',
         level: 8,
-      }
+      },
     ],
   },
 ];
@@ -379,6 +385,19 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
+    date: '2023 - Present',
+    location: 'Hitachi Energy Services, Kraków',
+    title: 'Software Development Engineer',
+    content: (
+      <div className="timelineItemContent">
+        <p>
+          <span>Technologies: </span>
+          <span>JavaScript, TypeScript, React, Jest, Git</span>
+        </p>
+      </div>
+    ),
+  },
+  {
     date: '2014 - 2023',
     location: 'Amsterdam Standard, Kraków',
     title: 'Full-Stack Developer',
@@ -387,8 +406,8 @@ export const experience: TimelineItem[] = [
         <p>
           <span>Technologies: </span>
           <span>
-            Java Script, Type Script, PHP, SQL, MongoDB, React JS, JQuery, Bootstrap, Zend Framework, Vegas CMF,
-            Symfony, Git, Composer, Linux, Docker
+            JavaScript, TypeScript, PHP, SQL, MongoDB, React JS, JQuery, Bootstrap, Zend Framework, Vegas CMF, Symfony,
+            Git, Composer, Linux, Docker
           </span>
         </p>
         <ul>

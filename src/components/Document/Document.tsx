@@ -1,11 +1,11 @@
 import Image from 'next/image';
-import {useRouter} from "next/router";
+import {useRouter} from 'next/router';
 import React, {FC, memo} from 'react';
 
 import {aboutData, cvData, education, experience, heroData, languages, links, skills} from '../../data/data';
 import styles from './Document.module.scss';
 import {SkillGroup} from './Skills';
-import TimelineItem from "./TimelineItem";
+import TimelineItem from './TimelineItem';
 
 const Document: FC = memo(() => {
   const router = useRouter();
@@ -42,11 +42,7 @@ const Document: FC = memo(() => {
             <h2 className="mb-4 mt-6 text-xl font-semibold">Links</h2>
             <div className="grid justify-items-start gap-6">
               {links.map(({label, Icon, href}) => (
-                <a
-                  aria-label={label}
-                  className="flex items-center"
-                  href={href}
-                  key={label}>
+                <a aria-label={label} className="flex items-center" href={href} key={label}>
                   <Icon />
                   <span className="pl-3">{label}</span>
                 </a>
@@ -90,16 +86,18 @@ const Document: FC = memo(() => {
         </div>
       </div>
 
-      {company && <footer className="border-fog-500 border-t-2 text-sm">
-        <p className="pt-2">
-          I hereby give consent for my personal data to be processed by {company} for the purpose of conducting
-          recruitment for the position for&nbsp;which I&nbsp;am&nbsp;applying.
-        </p>
-        <p className="pb-1">
-          I also consent to processing of my personal data by {company} for the purposes of any future recruitment
-          processes.
-        </p>
-      </footer>}
+      {company && (
+        <footer className="border-fog-500 border-t-2 text-sm">
+          <p className="pt-2">
+            I hereby give consent for my personal data to be processed by {company} for the purpose of conducting
+            recruitment for the position for&nbsp;which I&nbsp;am&nbsp;applying.
+          </p>
+          <p className="pb-1">
+            I also consent to processing of my personal data by {company} for the purposes of any future recruitment
+            processes.
+          </p>
+        </footer>
+      )}
     </div>
   );
 });

@@ -3,15 +3,16 @@ import {FC, memo} from 'react';
 import Icon, {IconProps} from './Icon';
 
 const TboroQrCode: FC<IconProps> = memo(props => (
-  <Icon {...{
-    xmlns: "http://www.w3.org/2000/svg",
-    xmlnsXlink: "http://www.w3.org/1999/xlink",
-    xmlSpace: "preserve",
-    width: 120,
-    height: 120,
-    viewBox: "0 0 696 696",
-    ...props
-  }}>
+  <Icon
+    {...{
+      xmlns: 'http://www.w3.org/2000/svg',
+      xmlnsXlink: 'http://www.w3.org/1999/xlink',
+      xmlSpace: 'preserve',
+      width: 120,
+      height: 120,
+      viewBox: '0 0 696 696',
+      ...props,
+    }}>
     <g fill="#000000" transform="translate(-30,-30) scale(1.05)">
       <g transform="translate(312,48) scale(4.12)">
         <path d="M0 0h6v6H0Z" />

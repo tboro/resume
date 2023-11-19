@@ -8,7 +8,7 @@ $documentWidth: 1060px;
 .cvContainer {
   line-height: 120%;
   font-style: normal;
-  color: rgb(33,33,33);
+  color: rgb(33, 33, 33);
   margin-left: 50%;
   transform: translateX(-50%);
   width: $documentWidth;
@@ -138,7 +138,7 @@ $documentWidth: 1060px;
     transform: translateX(-50%);
     width: $documentWidth;
     min-width: $documentWidth;
-    zoom: 98.5%;
+    zoom: 95%;
 
     header {
       img {
